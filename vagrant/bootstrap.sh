@@ -61,6 +61,9 @@ echo "redmine redmine/instances/default/app-password-confirm password ${REDMINE_
 echo "redmine redmine/instances/default/dbconfig-install boolean true" | sudo debconf-set-selections
 sudo apt-get install -q -y redmine
 
+# Install git
+sudo apt-get install -q -y git
+
 # Extra required package for ubuntu 14.04 to make redmine work.
 sudo gem install bundler
 
