@@ -32,18 +32,18 @@ Note: For Ubuntu 12.04, the included virtualbox version is enough to perform all
 Requirements after vagrant up specific to Nick's version
 ---------------------------------------
 - # Add agile tools
-  vagrant ssh
-  cd /usr/share/redmine
-  sudo mkdir plugins
-  cd /usr/share/redmine/plugins
-  sudo git clone https://github.com/RCRM/redmine_agile.git 
-  sudo git clone https://github.com/iRessources/AgileDwarf.git
-  cd /usr/share/redmine
-  sudo bundle install
-  sudo bundle exec rake redmine:plugins:migrate RAILS_ENV=production
-  sudo service thin restart
-  sudo service nginx restart
-  sudo touch tmp/restart.txt
+ - vagrant ssh
+ - cd /usr/share/redmine
+ - sudo mkdir plugins
+ - cd /usr/share/redmine/plugins
+ - sudo git clone https://github.com/RCRM/redmine_agile.git 
+ - sudo git clone https://github.com/iRessources/AgileDwarf.git
+ - cd /usr/share/redmine
+ - sudo bundle install
+ - sudo bundle exec rake redmine:plugins:migrate RAILS_ENV=production
+ - sudo service thin restart
+ - sudo service nginx restart
+ - sudo touch tmp/restart.txt
 
 
 Quick Start up
